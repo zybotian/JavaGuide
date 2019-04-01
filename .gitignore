@@ -1,0 +1,30 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+node_modules
+
+#package files
+target
+*.xml.bak
+*.iml
+.idea
+
+.classpath
+.project
+.settings/
+
+#thrift gen
+gen-javabean
+
+.arcconfig
+
+log/mifi*
+
+.DS_Store
+diff
+
+deploy-dependents
