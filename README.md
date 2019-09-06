@@ -1,5 +1,7 @@
 点击订阅[Java面试进阶指南](https://xiaozhuanlan.com/javainterview?rel=javaguide)(专为Java面试方向准备)。[为什么要弄这个专栏?](https://shimo.im/docs/9BJjNsNg7S4dCnz3/)
 
+点击关注[公众号](#公众号)及时获取笔主最新更新文章，并可免费领取本文档配套的《Java面试突击》以及Java工程师必备学习资源。
+
 <p align="center">
 <a href="https://github.com/Snailclimb/JavaGuide" target="_blank">
 	<img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-3/logo - 副本.png" width=""/>
@@ -14,20 +16,7 @@
   <a href="#投稿"><img src="https://img.shields.io/badge/support-投稿-critical.svg" alt="投稿"></a>
 </p>
 
-<h2 align="center">Special Sponsors</h2>
-
-<p align="center">
-<a href="https://coding.net/?utm_source=JavaGuide" target="_blank">
-  <img src="http://pqrlmrv7w.bkt.clouddn.com/img/2019-4/006rNwoDgy1g2dw5gau7nj30eg02vwfr.jpg"  width="390px"/>
-</a>
-  <a href="http://www.lubanjava.com/luban/index.html?=javaguide
-" target="_blank">
-  <img src="http://pqrlmrv7w.bkt.clouddn.com/img/2019-4/QQ图片20190514211856.gif" width="390px"/>
- </a>
-</p>
-
-
-推荐使用 <https://snailclimb.top/JavaGuide/> 在线阅读(访问速度慢的话，请使用 <https://snailclimb.gitee.io/javaguide> )，在线阅读内容本仓库同步一致。这种方式阅读的优势在于：有侧边栏阅读体验更好，Gitee pages 的访问速度相对来说也比较快。
+推荐使用 https://snailclimb.top/JavaGuide/ 在线阅读(访问速度慢的话，请使用 https://snailclimb.gitee.io/javaguide )，在线阅读内容本仓库同步一致。这种方式阅读的优势在于：有侧边栏阅读体验更好，Gitee pages 的访问速度相对来说也比较快。
 
 ## 目录
 
@@ -49,9 +38,9 @@
     - [MySQL](#mysql)
     - [Redis](#redis)
 - [系统设计](#系统设计)
-    - [设计模式](#设计模式)
-    - [常用框架](#常用框架)
-    - [数据通信](#数据通信)
+    - [设计模式(工厂模式、单例模式 ... )](#设计模式)
+    - [常用框架(Spring、Zookeeper ... )](#常用框架)
+    - [数据通信(消息队列、Dubbo ... )](#数据通信)
     - [网站架构](#网站架构)
 - [面试指南](#面试指南)
     - [备战面试](#备战面试)
@@ -60,7 +49,7 @@
 - [工具](#工具)
     - [Git](#git)
     - [Docker](#Docker)
-- [资料](#资料)
+- [资源](#资源)
     - [书单](#书单)
     - [Github榜单](#Github榜单)
 - [待办](#待办)
@@ -71,11 +60,13 @@
 ### 基础
 
 * [Java 基础知识回顾](docs/java/Java基础知识.md)
+* [Java 基础知识疑难点/易错点](docs/java/Java疑难点.md)
+* [一些重要的Java程序设计题](docs/java/Java程序设计题.md)
 * [J2EE 基础知识回顾](docs/java/J2EE基础知识.md)
 
 ### 容器
 
-* [常见面试题](docs/java/collection/Java集合框架常见面试题.md)
+* [Java容器常见面试题/知识点总结](docs/java/collection/Java集合框架常见面试题.md)
 * [ArrayList 源码学习](docs/java/collection/ArrayList.md)  
 * [LinkedList 源码学习](docs/java/collection/LinkedList.md)   
 * [HashMap(JDK1.8)源码学习](docs/java/collection/HashMap.md)  
@@ -91,10 +82,12 @@
 
 ### JVM
 
-* [Java内存区域](docs/java/jvm/Java内存区域.md)
-* [JVM垃圾回收](docs/java/jvm/JVM垃圾回收.md)
-* [JDK 监控和故障处理工具](docs/java/jvm/JDK监控和故障处理工具总结.md)
-* [《深入理解Java虚拟机》第2版学习笔记](docs/java/Java虚拟机（jvm）.md)
+* [一 Java内存区域](docs/java/jvm/Java内存区域.md)
+* [二 JVM垃圾回收](docs/java/jvm/JVM垃圾回收.md)
+* [三 JDK 监控和故障处理工具](docs/java/jvm/JDK监控和故障处理工具总结.md)
+* [四 类文件结构](docs/java/jvm/类文件结构.md)
+* [五 类加载过程](docs/java/jvm/类加载过程.md)
+* [六 类加载器](docs/java/jvm/类加载器.md)
 
 ### I/O
 
@@ -105,6 +98,7 @@
 
 * [Java 8 新特性总结](docs/java/What's%20New%20in%20JDK8/Java8Tutorial.md)
 * [Java 8 学习资源推荐](docs/java/What's%20New%20in%20JDK8/Java8教程推荐.md)
+* [Java8 forEach 指南](docs/java/What's%20New%20in%20JDK8/Java8foreach指南.md)
 
 ### 编程规范
 
@@ -121,7 +115,7 @@
 ### Linux相关
 
 * [后端程序员必备的 Linux 基础知识](docs/operating-system/后端程序员必备的Linux基础知识.md)  
-* [Shell 编程入门](docs/operating-system/Shell.md)  
+* [Shell 编程入门](docs/operating-system/Shell.md) 
 
 ## 数据结构与算法
 
@@ -132,7 +126,7 @@
 ### 算法
 
 - [算法学习资源推荐](docs/dataStructures-algorithms/算法学习资源推荐.md)  
-- [几道常见的子符串算法题总结 ](docs/dataStructures-algorithms/几道常见的子符串算法题.md)
+- [几道常见的字符串算法题总结 ](docs/dataStructures-algorithms/几道常见的子符串算法题.md)
 - [几道常见的链表算法题总结 ](docs/dataStructures-algorithms/几道常见的链表算法题.md)   
 - [剑指offer部分编程题](docs/dataStructures-algorithms/剑指offer部分编程题.md)
 - [公司真题](docs/dataStructures-algorithms/公司真题.md)
@@ -145,7 +139,7 @@
 * [MySQL 学习与面试](docs/database/MySQL.md)
 * [一千行MySQL学习笔记](docs/database/一千行MySQL命令.md)
 * [MySQL高性能优化规范建议](docs/database/MySQL高性能优化规范建议.md)
-* [搞定数据库索引就是这么简单](docs/database/MySQL%20Index.md)
+* [数据库索引总结](docs/database/MySQL%20Index.md)
 * [事务隔离级别(图文详解)](docs/database/事务隔离级别(图文详解).md)
 * [一条SQL语句在MySQL中如何执行的](docs/database/一条sql语句在mysql中如何执行的.md)
 
@@ -165,9 +159,11 @@
 
 #### Spring
 
-- [Spring 学习与面试](docs/system-design/framework/Spring学习与面试.md)
-- [Spring中bean的作用域与生命周期](docs/system-design/framework/SpringBean.md)
-- [SpringMVC 工作原理详解](docs/system-design/framework/SpringMVC%20%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3.md)
+- [Spring 学习与面试](docs/system-design/framework/spring/Spring.md)
+- [Spring 常见问题总结](docs/system-design/framework/spring/SpringInterviewQuestions.md)
+- [Spring中bean的作用域与生命周期](docs/system-design/framework/spring/SpringBean.md)
+- [SpringMVC 工作原理详解](docs/system-design/framework/spring/SpringMVC-Principle.md)
+- [Spring中都用到了那些设计模式?](docs/system-design/framework/spring/Spring-Design-Patterns.md)
 
 #### ZooKeeper
 
@@ -176,10 +172,12 @@
 
 ### 数据通信
 
-- [数据通信(RESTful、RPC、消息队列)相关知识点总结](docs/system-design/data-communication/数据通信(RESTful、RPC、消息队列).md)
+- [数据通信(RESTful、RPC、消息队列)相关知识点总结](docs/system-design/data-communication/summary.md)
 - [Dubbo 总结：关于 Dubbo 的重要知识点](docs/system-design/data-communication/dubbo.md)
 - [消息队列总结](docs/system-design/data-communication/message-queue.md)
-- [RabbitMQ 的重要概念以及安装](docs/system-design/data-communication/rabbitmq.md)
+- [RabbitMQ 入门](docs/system-design/data-communication/rabbitmq.md)
+- [RocketMQ的几个简单问题与答案](docs/system-design/data-communication/RocketMQ-Questions.md)
+- [Kafka系统设计开篇-面试看这篇就够了](docs/system-design/data-communication/Kafka系统设计开篇-面试看这篇就够了.md)
 
 ### 网站架构
 
@@ -222,13 +220,17 @@
 * [Docker 入门](docs/tools/Docker.md)
 * [一文搞懂 Docker 镜像的常用操作！](docs/tools/Docker-Image.md)
 
-## 资料
+## 资源
 
 ### 书单
 
 - [Java程序员必备书单](docs/data/java-recommended-books.md)
 
-### Github榜单
+### 实战项目推荐
+
+- [onemall](https://github.com/YunaiV/onemall) : mall 商城，基于微服务的思想，构建在 B2C 电商场景下的项目实战。核心技术栈，是 Spring Boot + Dubbo 。未来，会重构成 Spring Cloud Alibaba 。
+
+### Github 历史榜单
 
 - [Java 项目月榜单](docs/github-trending/JavaGithubTrending.md)
 
@@ -236,10 +238,7 @@
 
 ## 待办
 
-- [x] [Java 8 新特性总结](docs/java/What's%20New%20in%20JDK8/Java8Tutorial.md)
-- [x] [Java 8 新特性详解](docs/java/What's%20New%20in%20JDK8/Java8教程推荐.md)
 - [ ] Java 多线程类别知识重构(---正在进行中---)
-- [x] [BIO,NIO,AIO 总结 ](docs/java/BIO-NIO-AIO.md)
 - [ ] Netty 总结(---正在进行中---)
 - [ ] 数据结构总结重构(---正在进行中---)
 
@@ -277,7 +276,7 @@ Markdown 格式参考：[Github Markdown格式](https://guides.github.com/featur
 
 添加我的微信备注“Github”,回复关键字 **“加群”** 即可入群。
 
-![我的微信](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-2/JavaGuide.jpg)
+![我的微信](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/wechat1.jpg)
 
 ### Contributor
 
@@ -285,7 +284,10 @@ Markdown 格式参考：[Github Markdown格式](https://guides.github.com/featur
 
 <a href="https://github.com/fanofxiaofeng">
     <img src="https://avatars0.githubusercontent.com/u/3983683?s=460&v=4" width="45px"></a>
-<a href="https://github.com/dongzl">
+<a href="https://github.com/fanchenggang">  
+    <img src="https://avatars2.githubusercontent.com/u/8225921?s=460&v=4" width="45px">
+</a>
+<a href="https://github.com/ipofss">
     <img src="https://avatars1.githubusercontent.com/u/5917359?s=460&v=4" width="45px"></a>
 <a href="https://github.com/Gene1994">
     <img src="https://avatars3.githubusercontent.com/u/24930369?s=460&v=4" width="45px">
@@ -322,6 +324,9 @@ Markdown 格式参考：[Github Markdown格式](https://guides.github.com/featur
 <a href="https://github.com/cnLGMing">  
     <img src="https://avatars2.githubusercontent.com/u/15910705?s=460&v=4" width="45px">
 </a>
+<a href="https://github.com/fanchenggang">  
+    <img src="https://avatars0.githubusercontent.com/u/20358122?s=460&v=4" width="45px">
+</a>
 
 ### 公众号
 
@@ -329,6 +334,6 @@ Markdown 格式参考：[Github Markdown格式](https://guides.github.com/featur
 
 **《Java面试突击》:** 由本文档衍生的专为面试而生的《Java面试突击》V2.0 PDF 版本[公众号](#公众号)后台回复 **"Java面试突击"** 即可免费领取！
 
-**Java工程师必备学习资源:** 一些Java工程师常用学习资源[公众号](#公众号)后台回复关键字 **“1”** 即可免费无套路获取。 
+**Java工程师必备学习资源:** 一些Java工程师常用学习资源公众号后台回复关键字 **“1”** 即可免费无套路获取。 
 
-![我的公众号](https://user-gold-cdn.xitu.io/2018/11/28/167598cd2e17b8ec?w=258&h=258&f=jpeg&s=27334)
+![我的公众号](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/167598cd2e17b8ec.png)
