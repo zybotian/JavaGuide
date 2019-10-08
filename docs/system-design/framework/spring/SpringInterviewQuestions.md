@@ -1,33 +1,3 @@
-<!-- TOC -->
-
-- [什么是 Spring 框架?](#什么是-spring-框架)
-- [列举一些重要的Spring模块？](#列举一些重要的spring模块)
-- [@RestController vs @Controller](#restcontroller-vs-controller)
-    - [Controller 返回一个页面](#controller-返回一个页面)
-    - [@RestController 返回JSON 或 XML 形式数据](#restcontroller-返回json-或-xml-形式数据)
-    - [@Controller +@ResponseBody 返回JSON 或 XML 形式数据](#controller-responsebody-返回json-或-xml-形式数据)
-- [谈谈自己对于 Spring IoC 和 AOP 的理解](#谈谈自己对于-spring-ioc-和-aop-的理解)
-    - [IoC](#ioc)
-    - [AOP](#aop)
-- [Spring AOP 和 AspectJ AOP 有什么区别？](#spring-aop-和-aspectj-aop-有什么区别)
-- [Spring 中的 bean 的作用域有哪些?](#spring-中的-bean-的作用域有哪些)
-- [Spring 中的单例 bean 的线程安全问题了解吗？](#spring-中的单例-bean-的线程安全问题了解吗)
-- [Spring 中的 bean 生命周期?](#spring-中的-bean-生命周期)
-- [说说自己对于 Spring MVC 了解?](#说说自己对于-spring-mvc-了解)
-- [SpringMVC 工作原理了解吗?](#springmvc-工作原理了解吗)
-- [Spring 框架中用到了哪些设计模式？](#spring-框架中用到了哪些设计模式)
-- [@Component 和 @Bean 的区别是什么？](#component-和-bean-的区别是什么)
-- [将一个类声明为Spring的 bean 的注解有哪些?](#将一个类声明为spring的-bean-的注解有哪些)
-- [Spring 管理事务的方式有几种？](#spring-管理事务的方式有几种)
-- [Spring 事务中的隔离级别有哪几种?](#spring-事务中的隔离级别有哪几种)
-- [Spring 事务中哪几种事务传播行为?](#spring-事务中哪几种事务传播行为)
-- [@Transactional(rollbackFor = Exception.class)注解了解吗？](#transactionalrollbackfor--exceptionclass注解了解吗)
-- [如何使用JPA在数据库中非持久化一个字段？](#如何使用jpa在数据库中非持久化一个字段)
-- [参考](#参考)
-- [公众号](#公众号)
-
-<!-- /TOC -->
-
 这篇文章主要是想通过一些问题，加深大家对于 Spring 的理解，所以不会涉及太多的代码！这篇文章整理了挺长时间，下面的很多问题我自己在使用 Spring 的过程中也并没有注意，自己也是临时查阅了很多资料和书籍补上的。网上也有一些很多关于 Spring 常见问题/面试题整理的文章，我感觉大部分都是互相 copy，而且很多问题也不是很好，有些回答也存在问题。所以，自己花了一周的业余时间整理了一下，希望对大家有帮助。
 
 ## 1. 什么是 Spring 框架?
@@ -361,33 +331,6 @@ String transient4; // not persistent because of @Transient
 ```
 
 一般使用后面两种方式比较多，我个人使用注解的方式比较多。
-
-## 10. Spring Security
-
-### 10.1 认证 (Authentication) 和授权 (Authorization)
-
-这是一个绝大多数人都会混淆的问题。首先先从读音上来认识这两个名词，很多人都会把它俩的读音搞混，所以我建议你先先去查一查这两个单词到底该怎么读，他们的具体含义是什么。
-
-**Authentication（认证）** 是验证您的身份的凭据（例如用户名/用户ID和密码），通过这个凭据，系统得以知道你就是你，也就是说系统存在你这个用户。所以，Authentication 被称为身份/用户验证。
-
-**Authorization（授权）** 发生在 **Authentication（认证）**之后。授权嘛，光看意思大家应该就明白，它主要掌管我们访问系统的权限。比如有些特定资源只能具有特定权限的人才能访问比如admin，有些对系统资源操作比如删除、添加、更新只能特定人才具有。
-
-这两个一般在我们的系统中被结合在一起使用，目的就是为了保护我们系统的安全性。
-
-### Cookie的作用是什么?和Session有什么区别？
-
-Cookie 和 Session都是用来跟踪浏览器用户身份的会话方式，但是两者的应用场景不太一样。
-
- **Cookie 一般用来保存用户信息** 比如①我们在 Cookie 中保存已经登录过得用户信息，下次访问网站的时候页面可以自动帮你登录的一些基本信息给填了；②一般的网站都会有保持登录也就是说下次你再访问网站的时候就不需要重新登录了，这是因为用户登录的时候我们可以存放了一个 Token 在 Cookie 中，下次登录的时候只需要根据 Token 值来查找用户即可(为了安全考虑，重新登录一般要将 Token 重写)；③登录一次网站后访问网站其他页面不需要重新登录。**Session 的主要作用就是通过服务端记录用户的状态。** 典型的场景是购物车，当你要添加商品到购物车的时候，系统不知道是哪个用户操作的，因为 HTTP 协议是无状态的。服务端给特定的用户创建特定的 Session 之后就可以标识这个用户并且跟踪这个用户了。
-
-Cookie 数据保存在客户端(浏览器端)，Session 数据保存在服务器端。
-
-Cookie 存储在客户端中，而Session存储在服务器上，相对来说 Session 安全性更高。如果使用 Cookie 的一些敏感信息不要写入 Cookie 中，最好能将 Cookie 信息加密然后使用到的时候再去服务器端解密。
-
-### 什么是JWT?
-
-> JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties. The claims in a JWT are encoded as a JSON object that is used as the payload of a JSON Web Signature (JWS) structure or as the plaintext of a JSON Web Encryption (JWE) structure, enabling the claims to be digitally signed or integrity protected with a Message Authentication Code (MAC) and/or encrypted.    ——[JSON Web Token (JWT)](https://tools.ietf.org/html/rfc7519)
-
 
 
 ## 参考
